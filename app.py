@@ -68,7 +68,7 @@ def send_verification_email(email, code):
 @app.route('/')
 @login_required
 def home():
-    return app.send_static_file('index.html')
+    return render_template('index.html')  # Updated to render from templates/
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
